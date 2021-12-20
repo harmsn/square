@@ -20,6 +20,10 @@ a {
 .textarea {
   height: 92px !important;
 }
+.nav-button{
+  margin: 50px;
+  text-align: center;
+}
 .forget{
      font-size: smaller;
     float: right;

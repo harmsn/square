@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { loginJobApi } from "../Apis/RecruiterApi";
-import '../css/style.css'
+import "../css/style.css";
 function Login(props) {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,21 +37,29 @@ function Login(props) {
         <h3>Login</h3>
 
         <label className="label-input">Email Address</label>
-        <input className="input-text"
-          value={email} type="email"
+        <input
+          className="input-text"
+          value={email}
+          type="email"
           onChange={(e) => handleChange(e, "email")}
           placeholder="Enter your email"
         ></input>
 
         <label className="label-input">Password</label>
-        <span className="forget"><a href="/forgetpassword">Forgot your Password?</a></span>
-        <input className="input-text"
-          value={password} type="password"
+        <span className="forget">
+          <a href="/forgetpassword">Forgot your Password?</a>
+        </span>
+        <input
+          className="input-text"
+          value={password}
+          type="password"
           onChange={(e) => handleChange(e, "pass")}
           placeholder="Enter your password"
         ></input>
-        <div className="btn_login"><button onClick={submitLogin}>Login</button></div>
-        
+        <div className="btn_login">
+          <button onClick={submitLogin}>Login</button>
+        </div>
+
         <p className="below_text">
           New to MyJobs? <a href="/register">Sign up</a>
         </p>

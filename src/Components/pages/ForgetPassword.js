@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {forgetpasswordApi} from "../Apis/RecruiterApi"
-import '../css/style.css'
+import { forgetpasswordApi } from "../Apis/RecruiterApi";
+import "../css/style.css";
 function ForgetPassword(props) {
   const [email, setemail] = useState("");
   function handleChange(e, type) {
@@ -11,33 +11,32 @@ function ForgetPassword(props) {
     }
   }
   function submitLogin(e) {
-   
-    forgetpasswordApi(email,(result)=>{
-      if(result.success){
-      props.onChange(result.data.token);
+    forgetpasswordApi(email, (result) => {
+      if (result.success) {
+        props.onChange(result.data.token);
         window.location.href = "/resetpassword";
-      }
-      else
-      alert(result.message)
-    })
+      } else alert(result.message);
+    });
     e.preventDefault();
   }
   return (
     <div className="cardBox">
       <form>
         <h3>Forgot your password?</h3>
-        <p >
+        <p>
           Enter the email associated with your account and we'll send you
           instructions to reset your password.
         </p>
         <label className="label-input">Email Address</label>
-        <input className="input-text"
+        <input
+          className="input-text"
           value={email}
           onChange={(e) => handleChange(e, "email")}
           placeholder="Enter your email"
         ></input>
-         <div className="btn_login"><button onClick={submitLogin}>Submit</button></div>
-        
+        <div className="btn_login">
+          <button onClick={submitLogin}>Submit</button>
+        </div>
       </form>
     </div>
   );

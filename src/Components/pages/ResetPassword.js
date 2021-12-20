@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {resetPasswordApi} from "../Apis/RecruiterApi"
-import '../css/style.css';
+import { resetPasswordApi } from "../Apis/RecruiterApi";
+import "../css/style.css";
 function ResetPassword(props) {
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -21,12 +21,12 @@ function ResetPassword(props) {
       confirmPassword: confirm,
       token: props.token.access_token,
     };
-    resetPasswordApi(data,(result)=>{
-        if (result.success) {
-            window.location.href = "/login";
-          } else alert(result.message);  
-    })
-    
+    resetPasswordApi(data, (result) => {
+      if (result.success) {
+        window.location.href = "/login";
+      } else alert(result.message);
+    });
+
     e.preventDefault();
   }
   return (
@@ -36,21 +36,25 @@ function ResetPassword(props) {
 
         <label className="label-input">New password</label>
         <input
-        className="input-text"
+          className="input-text"
           value={password}
+          type="password"
           onChange={(e) => handleChange(e, "pass")}
           placeholder="Enter your password"
         ></input>
-<br></br>
+        <br></br>
         <label className="label-input">Confirm new password</label>
         <input
-        className="input-text"
-          value={confirm} 
+          className="input-text"
+          type="password"
+          value={confirm}
           onChange={(e) => handleChange(e, "conf")}
           placeholder="Enter your password"
         ></input>
-<div className="btn_login"> <button onClick={submitSignup}>Reset</button></div>
-       
+        <div className="btn_login">
+          {" "}
+          <button onClick={submitSignup}>Reset</button>
+        </div>
       </form>
     </div>
   );

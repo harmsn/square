@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import {postJobApi} from "../Apis/RecruiterApi";
-import '../css/style.css'
+import { postJobApi } from "../Apis/RecruiterApi";
+import "../css/style.css";
 function PostJob(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -26,13 +26,12 @@ function PostJob(props) {
       location: location,
     };
 
-     postJobApi(data,props.token.access_token , (result)=>{
-        if (result.success) {
-            window.location.href = "/postedjobs";
-        }
-        else alert(result.message)
-     })
-    
+    postJobApi(data, props.token.access_token, (result) => {
+      if (result.success) {
+        window.location.href = "/postedjobs";
+      } else alert(result.message);
+    });
+
     e.preventDefault();
   }
   return (
@@ -42,29 +41,36 @@ function PostJob(props) {
 
         <label className="label-input">Job title</label>
         <br></br>
-        <input className="input-text"
+        <input
+          className="input-text"
           value={title}
           onChange={(e) => handleChange(e, "title")}
           placeholder="Enter job title"
         ></input>
-<br></br>
+        <br></br>
         <label className="label-input">Description</label>
         <br></br>
-        <textarea className="input-text textarea"
-          value={description} rows="4" cols="50" 
+        <textarea
+          className="input-text textarea"
+          value={description}
+          rows="4"
+          cols="50"
           onChange={(e) => handleChange(e, "desc")}
           placeholder="Enter job description"
         ></textarea>
         <br></br>
         <label className="label-input">Location</label>
         <br></br>
-        <input className="input-text"
+        <input
+          className="input-text"
           value={location}
           onChange={(e) => handleChange(e, "loc")}
           placeholder="Enter location"
         ></input>
-<div className="btn_login">  <button onClick={submitJob}>Post</button></div>
-      
+        <div className="btn_login">
+          {" "}
+          <button onClick={submitJob}>Post</button>
+        </div>
       </form>
     </div>
   );

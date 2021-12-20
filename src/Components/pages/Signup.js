@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { signupJobApi } from "../Apis/RecruiterApi";
-import '../css/style.css'
+import "../css/style.css";
 function Signup(props) {
   const [name, setName] = useState("");
   const [email, setemail] = useState("");
@@ -51,45 +51,58 @@ function Signup(props) {
         <h3>Signup</h3>
         <label className="label-input">Full Name</label>
         <br></br>
-        <input className="input-text"
+        <input
+          className="input-text"
           value={name}
           onChange={(e) => handleChange(e, "name")}
           placeholder="Enter your full name"
         />
- <br></br>
+        <br></br>
         <label className="label-input">Email Address</label>
         <br></br>
-        <input className="input-text"
-          value={email} type="email"
+        <input
+          className="input-text"
+          value={email}
+          type="email"
           onChange={(e) => handleChange(e, "email")}
           placeholder="Enter your email"
         ></input>
- <br></br>
-        <label className="label-input">Create password</label>
-        <span className="forget"><label className="label-input">Re enter password</label></span>
         <br></br>
-        <input className="input-text mid"
-          value={password} type="password"
+        <label className="label-input">Create password</label>
+        <span className="forget">
+          <label className="label-input">Re enter password</label>
+        </span>
+        <br></br>
+        <input
+          className="input-text mid"
+          value={password}
+          type="password"
           onChange={(e) => handleChange(e, "pass")}
           placeholder="Enter your password"
         ></input>
-            
-        <input id="reenter" className="input-text mid"
-          value={confirm} type="password"
+
+        <input
+          id="reenter"
+          className="input-text mid"
+          value={confirm}
+          type="password"
           onChange={(e) => handleChange(e, "conf")}
           placeholder="Enter your password"
         ></input>
- <br></br>
+        <br></br>
         <label className="label-input">Skills</label>
         <br></br>
-        <input className="input-text"
+        <input
+          className="input-text"
           value={skills}
           onChange={(e) => handleChange(e, "skills")}
           placeholder="Enter comma seperated"
         ></input>
- <br></br>
- <div className="btn_login"> <button onClick={submitSignup}>Signup</button></div>
-       
+        <br></br>
+        <div className="btn_login">
+          {" "}
+          <button onClick={submitSignup}>Signup</button>
+        </div>
 
         <p className="below_text">
           Already have an account? <a href="/login">Login</a>

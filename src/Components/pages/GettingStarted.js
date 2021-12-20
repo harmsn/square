@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import '../css/style.css'
+import "../css/style.css";
 function GettingStarted() {
   return (
-    <button onClick={(e) => (window.location.href = "/login")}>
-      Login/Signup
-    </button>
+    <div className="nav-button">
+      <button onClick={(e) => (window.location.href = "/login")}>
+        Login/Signup
+      </button>
+    </div>
   );
 }
 
