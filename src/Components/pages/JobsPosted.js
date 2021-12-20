@@ -70,29 +70,36 @@ function JobsPosted(props) {
   }, []);
 
   return (
-    <div>
-      {" "}
-      <div className="nav-button">
-        <button onClick={postJob}>Post a Job</button>
-        <span>&nbsp;</span>
-        <button onClick={logoutMyjobs}>Log out</button>
+    <div className="outer_cardbg">
+      <div className="cardbg">
+        <p className="myJobs">
+          My<span style={{ color: "#43AFFF" }}>Jobs</span>
+        </p>
       </div>
-      {jobs.length > 0 ? (
-        <h3 style={{ textAlign: "center" }}>Jobs posted by you:</h3>
-      ) : (
-        <span></span>
-      )}
-      <div className="cardgrid">
-        {jobs.length > 0 ? <ListofJobs /> : <span></span>}
-      </div>
-      {jobs.length > 0 ? (
-        <div className="pagination">
-          {" "}
-          <Pagination count={count} />
+      <div className="Jobs_posted">
+        {" "}
+        <div className="nav-button">
+          <button onClick={postJob}>Post a Job</button>
+          <span>&nbsp;</span>
+          <button onClick={logoutMyjobs}>Log out</button>
         </div>
-      ) : (
-        <span></span>
-      )}
+        {jobs.length > 0 ? (
+          <h3 style={{ textAlign: "center" }}>Jobs posted by you:</h3>
+        ) : (
+          <span></span>
+        )}
+        <div className="cardgrid">
+          {jobs.length > 0 ? <ListofJobs /> : <span></span>}
+        </div>
+        {jobs.length > 0 ? (
+          <div className="pagination">
+            {" "}
+            <Pagination count={count} />
+          </div>
+        ) : (
+          <span></span>
+        )}
+      </div>
     </div>
   );
 }

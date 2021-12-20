@@ -30,32 +30,39 @@ function ResetPassword(props) {
     e.preventDefault();
   }
   return (
-    <div className="cardBox">
-      <form>
-        <h3>Reset Your Password</h3>
+    <div className="outer_cardbg">
+      <div className="cardbg">
+        <p className="myJobs">
+          My<span style={{ color: "#43AFFF" }}>Jobs</span>
+        </p>
+      </div>
+      <div className="cardBox">
+        <form>
+          <h3>Reset Your Password</h3>
 
-        <label className="label-input">New password</label>
-        <input
-          className="input-text"
-          value={password}
-          type="password"
-          onChange={(e) => handleChange(e, "pass")}
-          placeholder="Enter your password"
-        ></input>
-        <br></br>
-        <label className="label-input">Confirm new password</label>
-        <input
-          className="input-text"
-          type="password"
-          value={confirm}
-          onChange={(e) => handleChange(e, "conf")}
-          placeholder="Enter your password"
-        ></input>
-        <div className="btn_login">
-          {" "}
-          <button onClick={submitSignup}>Reset</button>
-        </div>
-      </form>
+          <label className="label-input">New password</label>
+          <input
+            className="input-text"
+            value={password}
+            type="password"
+            onChange={(e) => handleChange(e, "pass")}
+            placeholder="Enter your password"
+          ></input>
+          <br></br>
+          <label className="label-input">Confirm new password</label>
+          <input
+            className="input-text"
+            type="password"
+            value={confirm}
+            onChange={(e) => handleChange(e, "conf")}
+            placeholder="Enter your password"
+          ></input>
+          <div className="btn_login">
+            {" "}
+            <button onClick={submitSignup}>Reset</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

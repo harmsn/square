@@ -35,43 +35,50 @@ function PostJob(props) {
     e.preventDefault();
   }
   return (
-    <div className="cardBox">
-      <form>
-        <h3>Post a Job</h3>
+    <div className="outer_cardbg">
+      <div className="cardbg">
+        <p className="myJobs">
+          My<span style={{ color: "#43AFFF" }}>Jobs</span>
+        </p>
+      </div>
+      <div className="cardBox">
+        <form>
+          <h3>Post a Job</h3>
 
-        <label className="label-input">Job title</label>
-        <br></br>
-        <input
-          className="input-text"
-          value={title}
-          onChange={(e) => handleChange(e, "title")}
-          placeholder="Enter job title"
-        ></input>
-        <br></br>
-        <label className="label-input">Description</label>
-        <br></br>
-        <textarea
-          className="input-text textarea"
-          value={description}
-          rows="4"
-          cols="50"
-          onChange={(e) => handleChange(e, "desc")}
-          placeholder="Enter job description"
-        ></textarea>
-        <br></br>
-        <label className="label-input">Location</label>
-        <br></br>
-        <input
-          className="input-text"
-          value={location}
-          onChange={(e) => handleChange(e, "loc")}
-          placeholder="Enter location"
-        ></input>
-        <div className="btn_login">
-          {" "}
-          <button onClick={submitJob}>Post</button>
-        </div>
-      </form>
+          <label className="label-input">Job title</label>
+          <br></br>
+          <input
+            className="input-text"
+            value={title}
+            onChange={(e) => handleChange(e, "title")}
+            placeholder="Enter job title"
+          ></input>
+          <br></br>
+          <label className="label-input">Description</label>
+          <br></br>
+          <textarea
+            className="input-text textarea"
+            value={description}
+            rows="4"
+            cols="50"
+            onChange={(e) => handleChange(e, "desc")}
+            placeholder="Enter job description"
+          ></textarea>
+          <br></br>
+          <label className="label-input">Location</label>
+          <br></br>
+          <input
+            className="input-text"
+            value={location}
+            onChange={(e) => handleChange(e, "loc")}
+            placeholder="Enter location"
+          ></input>
+          <div className="btn_login">
+            {" "}
+            <button onClick={submitJob}>Post</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

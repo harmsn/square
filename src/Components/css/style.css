@@ -6,10 +6,19 @@
   box-shadow: 0px 30px 36px #557da526;
   width: 557px;
   height: auto;
-  margin-left: auto;
+  margin-left: 375px;
   margin-right: auto;
   margin-top: 160px;
   opacity: 1;
+  position: absolute;
+}
+.outer_cardbg {
+  position: relative;
+
+  height: 100%;
+}
+html {
+  background: #edf6ff 0% 0% no-repeat padding-box;
 }
 a {
   text-align: center;
@@ -93,6 +102,11 @@ a {
   align-items: center;
   place-content: center;
 }
+.Jobs_posted {
+  position: absolute;
+  z-index: 1;
+  margin-top: 70px;
+}
 .jobDescription {
   text-align: left;
   font: normal normal normal 14px/16px Helvetica;
@@ -141,5 +155,23 @@ button {
   background: #43afff 0% 0% no-repeat padding-box;
 
   border-radius: 5px;
+  opacity: 1;
+}
+.cardbg {
+  width: 100%;
+  margin-top: 0px;
+  height: 362px;
+  background: transparent linear-gradient(253deg, #303f60 0%, #1a253c 100%) 0%
+    0% no-repeat;
+  position: absolute;
+}
+.myJobs {
+  color: #edf6ff;
+  width: 82px;
+  height: 26px;
+  text-align: left;
+  margin-left: 70px;
+  font: normal normal bold 22px/27px Helvetica;
+  letter-spacing: 0px;
   opacity: 1;
 }

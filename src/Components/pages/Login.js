@@ -32,38 +32,45 @@ function Login(props) {
   }
 
   return (
-    <div className="cardBox">
-      <form>
-        <h3>Login</h3>
-
-        <label className="label-input">Email Address</label>
-        <input
-          className="input-text"
-          value={email}
-          type="email"
-          onChange={(e) => handleChange(e, "email")}
-          placeholder="Enter your email"
-        ></input>
-
-        <label className="label-input">Password</label>
-        <span className="forget">
-          <a href="/forgetpassword">Forgot your Password?</a>
-        </span>
-        <input
-          className="input-text"
-          value={password}
-          type="password"
-          onChange={(e) => handleChange(e, "pass")}
-          placeholder="Enter your password"
-        ></input>
-        <div className="btn_login">
-          <button onClick={submitLogin}>Login</button>
-        </div>
-
-        <p className="below_text">
-          New to MyJobs? <a href="/register">Sign up</a>
+    <div className="outer_cardbg">
+      <div className="cardbg">
+        <p className="myJobs">
+          My<span style={{ color: "#43AFFF" }}>Jobs</span>
         </p>
-      </form>
+      </div>
+      <div className="cardBox">
+        <form>
+          <h3>Login</h3>
+
+          <label className="label-input">Email Address</label>
+          <input
+            className="input-text"
+            value={email}
+            type="email"
+            onChange={(e) => handleChange(e, "email")}
+            placeholder="Enter your email"
+          ></input>
+
+          <label className="label-input">Password</label>
+          <span className="forget">
+            <a href="/forgetpassword">Forgot your Password?</a>
+          </span>
+          <input
+            className="input-text"
+            value={password}
+            type="password"
+            onChange={(e) => handleChange(e, "pass")}
+            placeholder="Enter your password"
+          ></input>
+          <div className="btn_login">
+            <button onClick={submitLogin}>Login</button>
+          </div>
+
+          <p className="below_text">
+            New to MyJobs? <a href="/register">Sign up</a>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }
