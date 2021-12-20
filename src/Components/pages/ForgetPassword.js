@@ -36,8 +36,8 @@ function ForgetPassword(props) {
           onChange={(e) => handleChange(e, "email")}
           placeholder="Enter your email"
         ></input>
-
-        <button onClick={submitLogin}>Submit</button>
+         <div className="btn_login"><button onClick={submitLogin}>Submit</button></div>
+        
       </form>
     </div>
   );

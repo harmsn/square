@@ -50,11 +50,11 @@ function PostJob(props) {
 <br></br>
         <label className="label-input">Description</label>
         <br></br>
-        <input className="input-text textarea"
-          value={description}
+        <textarea className="input-text textarea"
+          value={description} rows="4" cols="50" 
           onChange={(e) => handleChange(e, "desc")}
           placeholder="Enter job description"
-        ></input>
+        ></textarea>
         <br></br>
         <label className="label-input">Location</label>
         <br></br>
@@ -63,8 +63,8 @@ function PostJob(props) {
           onChange={(e) => handleChange(e, "loc")}
           placeholder="Enter location"
         ></input>
-
-        <button onClick={submitJob}>Post</button>
+<div className="btn_login">  <button onClick={submitJob}>Post</button></div>
+      
       </form>
     </div>
   );

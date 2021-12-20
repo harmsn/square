@@ -38,21 +38,21 @@ function Login(props) {
 
         <label className="label-input">Email Address</label>
         <input className="input-text"
-          value={email}
+          value={email} type="email"
           onChange={(e) => handleChange(e, "email")}
           placeholder="Enter your email"
         ></input>
 
         <label className="label-input">Password</label>
-        <a align="right" href="/forgetpassword">Forgot your Password?</a>
+        <span className="forget"><a href="/forgetpassword">Forgot your Password?</a></span>
         <input className="input-text"
-          value={password}
+          value={password} type="password"
           onChange={(e) => handleChange(e, "pass")}
           placeholder="Enter your password"
         ></input>
-
-        <button onClick={submitLogin}>Login</button>
-        <p>
+        <div className="btn_login"><button onClick={submitLogin}>Login</button></div>
+        
+        <p className="below_text">
           New to MyJobs? <a href="/register">Sign up</a>
         </p>
       </form>

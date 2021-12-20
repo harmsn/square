@@ -41,7 +41,7 @@ function ResetPassword(props) {
           onChange={(e) => handleChange(e, "pass")}
           placeholder="Enter your password"
         ></input>
-
+<br></br>
         <label className="label-input">Confirm new password</label>
         <input
         className="input-text"
@@ -49,8 +49,8 @@ function ResetPassword(props) {
           onChange={(e) => handleChange(e, "conf")}
           placeholder="Enter your password"
         ></input>
-
-        <button onClick={submitSignup}>Reset</button>
+<div className="btn_login"> <button onClick={submitSignup}>Reset</button></div>
+       
       </form>
     </div>
   );

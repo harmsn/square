@@ -1,5 +1,5 @@
 .cardBox {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 8px;
   border: 1px solid #eeeeee;
   padding: 30px;
@@ -13,64 +13,82 @@
 }
 a {
   text-align: center;
-  font: normal normal normal 14px/16px Helvetica Neue;
+  font: normal normal normal 14px/16px Helvetica;
   letter-spacing: 0px;
   color: #43afff;
 }
-.textarea{
-    height: 92px !important;
+.textarea {
+  height: 92px !important;
 }
-.jobCard{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 8px;
-    border: 1px solid #eeeeee;
-    padding: 30px;
-    box-shadow: 0px 30px 36px #557da526;
-    width: 260px;
-    height: auto;
-    margin-top: 50px;
-    opacity: 1;
-    margin-right: 5px;
-    margin-left: 5px;  
+.forget{
+     font-size: smaller;
+    float: right;
+    margin-right: 55px;
 }
-.jobTitle{
-    height: 20px;
-text-align: left;
-font: normal normal normal 17px/20px Helvetica Neue;
-letter-spacing: 0px;
-color: #303F60;
-opacity: 1;
+#reenter{
+    margin-left: 15px;
 }
-.viewApp{
-    width: 125px;
-height: 32px;
-background: #43AFFF33 0% 0% no-repeat padding-box;
-border-radius: 5px;
-opacity: 1;
-font: normal normal normal 12px/14px Helvetica Neue;
-letter-spacing: 0px;
-color: #303F60;
-text-transform: capitalize;
+.below_text{
+    text-align: center;
+    font: normal normal normal 12px/14px Helvetica;
+    color: #303f60;
+}
+.jobCard {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 30px;
+  box-shadow: 0px 30px 36px #557da526;
+  width: 260px;
+  height: auto;
+  margin-top: 50px;
+  opacity: 1;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.jobTitle {
+  height: 20px;
+  text-align: left;
+  font: normal normal normal 17px/20px Helvetica;
+  letter-spacing: 0px;
+  color: #303f60;
+  opacity: 1;
+}
+.btn_login{
+    text-align: center;
+    margin: 32px;
 
 }
-.cardgrid{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    align-items: center;
-    place-content: center;
+.viewApp {
+  width: 125px;
+  height: 32px;
+  background: #43afff33 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  font: normal normal normal 12px/14px Helvetica;
+  letter-spacing: 0px;
+  color: #303f60;
+  text-transform: capitalize;
+  margin-left: 30px;
 }
-.jobDescription{
-text-align: left;
-font: normal normal normal 14px/16px Helvetica Neue;
-letter-spacing: 0px;
-color: #303F60;
-opacity: 0.8;
+.cardgrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  place-content: center;
 }
-h3{
-font: normal normal medium 22px/27px Helvetica Neue;
-letter-spacing: 0px;
-color: #303F60;
+.jobDescription {
+  text-align: left;
+  font: normal normal normal 14px/16px Helvetica;
+  letter-spacing: 0px;
+  color: #303f60;
+  opacity: 0.8;
+}
+h3 {
+  font: normal normal medium 22px/27px Helvetica;
+  letter-spacing: 0px;
+  color: #303f60;
 }
 .input-text {
   margin-top: 5px;
@@ -90,7 +108,7 @@ color: #303F60;
   height: 16px;
   color: var(--unnamed-color-303f60);
   text-align: left;
-  font: normal normal normal 14px/16px Helvetica Neue;
+  font: normal normal normal 14px/16px Helvetica;
   letter-spacing: 0px;
   color: #303f60;
   text-transform: capitalize;
@@ -106,7 +124,7 @@ button {
   background: var(--unnamed-color-43afff) 0% 0% no-repeat padding-box;
   border: 1px solid var(--unnamed-color-43afff);
   background: #43afff 0% 0% no-repeat padding-box;
- 
+
   border-radius: 5px;
   opacity: 1;
 }

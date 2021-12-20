@@ -10,11 +10,11 @@ function JobsPosted(props) {
   function ListofJobs() {
     const m_list = jobs.map((data, index) => (
 
-        <div className="jobCard"><div>
+        <div key={index} className="jobCard"><div>
         <p className="jobTitle">{data.title}</p>
         <p className="jobDescription">{data.description}</p>
         <i className='fas fa-map-marker-alt'></i><span className="jobDescription"> {data.location}</span>
-        <span><button className="viewApp" value={data.id} onClick={getApplicants}>
+        <span className="btn_view"><button className="viewApp" value={data.id} onClick={getApplicants}>
           View Applications
         </button></span>
       </div>
@@ -44,7 +44,7 @@ function JobsPosted(props) {
     <div>
       <button onClick={postJob}>Create Job</button>
       <button onClick={logoutMyjobs}>Log out</button>
-      <div className="cardgrid">{jobs.length > 0 ? <ListofJobs /> : <span></span>}</div>
+      <div className="cardgrid">{jobs.length > 0 ? <ListofJobs />: <span></span>}</div>
       
     </div>
   );
