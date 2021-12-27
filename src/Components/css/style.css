@@ -32,6 +32,7 @@ a {
 .nav-button {
   margin: 50px;
   text-align: center;
+  cursor:pointer;
 }
 .page_number {
   font-size: medium;
@@ -82,6 +83,7 @@ a {
 .btn_login {
   text-align: center;
   margin: 32px;
+  cursor:pointer;
 }
 .viewApp {
   width: 125px;
@@ -153,7 +155,7 @@ button {
   background: var(--unnamed-color-43afff) 0% 0% no-repeat padding-box;
   border: 1px solid var(--unnamed-color-43afff);
   background: #43afff 0% 0% no-repeat padding-box;
-
+  cursor:pointer;
   border-radius: 5px;
   opacity: 1;
 }
